@@ -10,6 +10,8 @@
 
 
 
+import java.awt.Color;
+import java.awt.Font;
 import javax.swing.*;
 /**
  *
@@ -17,9 +19,34 @@ import javax.swing.*;
  */
 public class Menu extends JPanel {
 
+    private JLabel menuTitle;
+    private JComboBox items;
+    private JLabel menuDescription;
     
     public Menu()
     {
+        setBackground(Color.RED);
+        setLayout(null);
+        final int MENU_WIDTH = 800;
+        final int MENU_HEIGHT = 800;
+        setSize(MENU_WIDTH, MENU_HEIGHT);
+        menuTitle = new JLabel("Main Menu");
+        menuTitle.setBounds(0, 0, 650, 200);
+        menuTitle.setFont(new Font("Serif", Font.BOLD, 100));
+        menuDescription = new JLabel("Select an item");
+        menuDescription.setFont(new Font("Serif", Font.BOLD, 50));
+        menuDescription.setBounds(100, 270, 500, 180);
+        items = new JComboBox();
+        items.setBounds(100, 400, 200, 20);
+        items.addItem("Item 1");
+        items.addItem("Item 2");
+        items.addItem("Item 3");
+        
+        add(menuTitle);
+        add(menuDescription);
+        add(items);
         
     }
+    
+    
 }
