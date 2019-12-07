@@ -36,7 +36,7 @@ public class SelectTable {
             while (rs.next()) {  
                 System.out.println(rs.getInt("ItemNum") +  "\t" +   
                                    rs.getString("ItemName") + "\t" +  
-                                   rs.getInt("Price") + "\t" +
+                                   rs.getDouble("Price") + "\t" +
                                    rs.getString("Size")
                );  
             }  
