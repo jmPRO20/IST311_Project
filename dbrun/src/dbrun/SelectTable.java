@@ -9,7 +9,7 @@ import java.sql.Statement;
 
 public class SelectTable {  
    
-    private Connection connect() {  
+    public Connection connect() {  
         // SQLite connection string  
         String url = "jdbc:sqlite:updatemenu.db";  
         Connection conn = null;  
